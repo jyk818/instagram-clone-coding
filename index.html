@@ -5,47 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three-Column Layout</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <div class="left">
-            <!-- Logo -->
             <div class="logo">
-                <img src="your-logo.png" alt="Logo" class="logo-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1024px-Instagram_logo.svg.png" alt="Logo" class="logo-img">
             </div>
-
-            <!-- Menu -->
             <div class="menu">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#">Explore</a></li>
-                    <li><a href="#">Reels</a></li>
-                    <li><a href="#">Messages</a></li>
-                    <li><a href="#">Notifications</a></li>
-                    <li><a href="#">Create</a></li>
-                    <li><a href="#">Profile</a></li>
-                </ul>
-            </div>
-
-            <!-- Bottom Tabs -->
-            <div class="bottom-tabs">
-                <ul>
-                    <li><a href="#">Threads</a></li>
-                    <li><a href="#">More</a></li>
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+                    <li><a href="#"><i class="fa-solid fa-compass"></i> Explore</a></li>
+                    <li><a href="#"><i class="fa-solid fa-film"></i> Reels</a></li>
+                    <li><a href="#"><i class="fa-regular fa-paper-plane"></i> Messages</a></li>
+                    <li><a href="#"><i class="fa-regular fa-heart"></i> Notifications</a></li>
+                    <li><a href="#"><i class="fa-regular fa-square-plus"></i> Create</a></li>
+                    <li><a href="#"><i class="fa-regular fa-user"></i> Profile</a></li>
+                    <li><br></li>
+                    <li><br></li>
+                    <li><a href="#"><i class="fa-solid fa-at"></i> Threads</a></li>
+                    <li><a href="#"><i class="fa-solid fa-bars"></i> More</a></li>
                 </ul>
             </div>
         </div>
-
         <div class="center">
-            <!-- Circles with Images and Usernames -->
             <div class="circle-container">
                 <div class="circle">
                     <img src="user1.jpg" alt="User 1" class="circle-img">
                     <p class="username">User1</p>
-                    <!-- Post -->
                     <div class="post">
                         <div class="post-header">
                             <img src="user1.jpg" alt="User 1" class="post-user-img">
@@ -53,12 +42,10 @@
                         </div>
                         <img src="post-image1.jpg" alt="Post Image" class="post-img">
                         <p class="post-caption">This is the caption for post 1</p>
-                        
-                        <!-- Post Actions (Like, Comment, Share) -->
                         <div class="post-actions">
                             <span class="action">
                                 <i class="fas fa-thumbs-up"></i> Like
-                                <p class="like-count">120</p> <!-- Like counter -->
+                                <p class="like-count">120</p>
                             </span>
                             <span class="action">
                                 <i class="fas fa-comment"></i> Comment
@@ -69,11 +56,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Repeat for other users -->
                 <div class="circle">
                     <img src="user2.jpg" alt="User 2" class="circle-img">
                     <p class="username">User2</p>
-                    <!-- Post -->
                     <div class="post">
                         <div class="post-header">
                             <img src="user2.jpg" alt="User 2" class="post-user-img">
@@ -81,12 +66,10 @@
                         </div>
                         <img src="post-image2.jpg" alt="Post Image" class="post-img">
                         <p class="post-caption">This is the caption for post 2</p>
-                        
-                        <!-- Post Actions (Like, Comment, Share) -->
                         <div class="post-actions">
                             <span class="action">
                                 <i class="fas fa-thumbs-up"></i> Like
-                                <p class="like-count">45</p> <!-- Like counter -->
+                                <p class="like-count">45</p>
                             </span>
                             <span class="action">
                                 <i class="fas fa-comment"></i> Comment
@@ -97,16 +80,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- Repeat for remaining users... -->
             </div>
         </div>
-
         <div class="right">
             <h2>Right Sidebar</h2>
             <p>This is the right section.</p>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

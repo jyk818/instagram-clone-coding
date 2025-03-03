@@ -1,4 +1,4 @@
-/* Existing Styles */
+/* Updated Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #333; /* Changed background to dark */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -22,11 +22,14 @@ body {
 }
 
 .left {
-    width: 20%;
-    background-color: #333;
-    color: white;
+    width: 15%; /* Shrunk left column */
+    background-color: #fff; /* Changed color to white */
+    color: #333; /* Changed text color to dark */
     padding: 20px;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0; /* Position it at the very left */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,7 +56,7 @@ body {
 
 .menu ul li a {
     text-decoration: none;
-    color: white;
+    color: #333; /* Changed text color to dark */
     font-size: 18px;
     display: block;
     padding: 10px;
@@ -61,44 +64,23 @@ body {
     transition: background-color 0.3s;
 }
 
+.menu ul li a i {
+    margin-right: 10px; /* 아이콘과 텍스트 사이에 공간 추가 */
+}
+
 .menu ul li a:hover, .menu ul li a.active {
-    background-color: #555;
+    background-color: #ccc; /* Changed hover background */
 }
 
-/* Bottom Tabs */
-.bottom-tabs ul {
-    list-style-type: none;
-    padding: 0;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
-}
-
-.bottom-tabs ul li {
-    margin: 10px 0;
-}
-
-.bottom-tabs ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    display: block;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    text-align: center;
-}
-
-.bottom-tabs ul li a:hover {
-    background-color: #555;
+.menu ul li:nth-child(9) {
+    margin-bottom: 60px; /* Increased space between Profile and Threads */
 }
 
 .center {
-    width: 55%;
+    width: 60%;
     padding: 20px;
-    background-color: #fff;
-    color: #333;
+    background-color: #333; /* Changed to dark */
+    color: #fff; /* Changed text color to white */
     height: 100vh;
     overflow-y: auto;
 }
@@ -127,13 +109,12 @@ body {
 .username {
     margin-top: 10px;
     font-size: 14px;
-    color: #333;
+    color: #fff;
 }
 
-/* Post Styling */
 .post {
     margin-top: 20px;
-    background-color: #f9f9f9;
+    background-color: #444; /* Dark background for post */
     border-radius: 8px;
     padding: 10px;
 }
@@ -154,7 +135,7 @@ body {
 
 .post-username {
     font-size: 14px;
-    color: #333;
+    color: #fff;
 }
 
 .post-img {
@@ -166,11 +147,10 @@ body {
 
 .post-caption {
     font-size: 14px;
-    color: #555;
+    color: #fff;
     margin-top: 10px;
 }
 
-/* Post Actions Styling */
 .post-actions {
     display: flex;
     justify-content: space-around;
@@ -180,7 +160,7 @@ body {
 
 .action {
     cursor: pointer;
-    color: #666;
+    color: #ccc;
     display: flex;
     align-items: center;
 }
@@ -190,23 +170,25 @@ body {
 }
 
 .action:hover {
-    color: #333;
+    color: #fff;
 }
 
-/* Like counter */
 .like-count {
     font-size: 12px;
-    color: #666;
+    color: #ccc;
     margin-top: 5px;
     text-align: center;
 }
 
 .right {
-    width: 20%;
-    background-color: #333;
-    color: white;
+    width: 10%; /* Shrunk right column */
+    background-color: #fff; /* Changed color to white */
+    color: #333; /* Changed text color to dark */
     padding: 20px;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0; /* Position it at the very right */
 }
 
 h1, h2 {
