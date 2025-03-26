@@ -1,40 +1,45 @@
-/* Updated Styles */
+/* General reset for margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #333; /* Changed background to dark */
+    background-color: #fff; /* White background */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
 }
 
+/* Container for the entire page */
 .container {
     display: flex;
     width: 80%;
     height: 100%;
     justify-content: space-between;
+    position: relative;
 }
 
+/* Left column - sidebar */
 .left {
-    width: 15%; /* Shrunk left column */
-    background-color: #fff; /* Changed color to white */
-    color: #333; /* Changed text color to dark */
+    width: 15%; /* Set left column to 15% width */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text */
     padding: 20px;
     height: 100vh;
-    position: absolute;
+    position: fixed; /* Keep it fixed on the left side */
     top: 0;
-    left: 0; /* Position it at the very left */
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+/* Logo in the left column */
 .logo {
     text-align: center;
     margin-bottom: 20px;
@@ -45,6 +50,7 @@ body {
     max-width: 120px;
 }
 
+/* Menu list in the left column */
 .menu ul {
     list-style-type: none;
     padding: 0;
@@ -56,7 +62,7 @@ body {
 
 .menu ul li a {
     text-decoration: none;
-    color: #333; /* Changed text color to dark */
+    color: #333; /* Dark text */
     font-size: 18px;
     display: block;
     padding: 10px;
@@ -65,137 +71,107 @@ body {
 }
 
 .menu ul li a i {
-    margin-right: 10px; /* 아이콘과 텍스트 사이에 공간 추가 */
+    margin-right: 10px; /* Space between icon and text */
 }
 
 .menu ul li a:hover, .menu ul li a.active {
-    background-color: #ccc; /* Changed hover background */
+    background-color: #ccc; /* Hover background */
 }
 
 .menu ul li:nth-child(9) {
     margin-bottom: 60px; /* Increased space between Profile and Threads */
 }
 
+/* Center column - main content area */
 .center {
-    width: 60%;
+    width: calc(100% - 30%); /* Take up the remaining space between left and right sections */
     padding: 20px;
-    background-color: #333; /* Changed to dark */
-    color: #fff; /* Changed text color to white */
+    background-color: #ffffff;
+    color: #000000;
     height: 100vh;
     overflow-y: auto;
+    margin-left: 15%; /* To ensure the center section starts after the left sidebar */
 }
 
-.circle-container {
+/* User list in the center */
+.users-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.circle {
-    text-align: center;
-    width: 80px;
-    height: 80px;
-}
-
-.circle-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.username {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #fff;
-}
-
-.post {
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
-    background-color: #444; /* Dark background for post */
-    border-radius: 8px;
-    padding: 10px;
+    gap: 10px;
+    flex-wrap: wrap;  /* Allows wrapping if screen size is small */
 }
 
-.post-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.user {
+    text-align: center;
+    flex: 1 1 10%;  /* Ensures 8 users fit within the container */
 }
 
-.post-user-img {
-    width: 30px;
-    height: 30px;
+.user-img {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 10px;
 }
 
-.post-username {
+.user-name {
+    margin-top: 8px;
+    color: #000000;
     font-size: 14px;
-    color: #fff;
 }
 
-.post-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .user {
+        flex: 1 1 20%;
+    }
 }
 
-.post-caption {
-    font-size: 14px;
-    color: #fff;
-    margin-top: 10px;
+@media (max-width: 480px) {
+    .user {
+        flex: 1 1 40%;
+    }
 }
 
-.post-actions {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-.action {
-    cursor: pointer;
-    color: #ccc;
-    display: flex;
-    align-items: center;
-}
-
-.action i {
-    margin-right: 5px;
-}
-
-.action:hover {
-    color: #fff;
-}
-
-.like-count {
-    font-size: 12px;
-    color: #ccc;
-    margin-top: 5px;
-    text-align: center;
-}
-
+/* Right column - account and recommendations */
 .right {
-    width: 10%; /* Shrunk right column */
-    background-color: #fff; /* Changed color to white */
-    color: #333; /* Changed text color to dark */
+    width: 15%; /* Right sidebar width */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
     padding: 20px;
     height: 100vh;
-    position: absolute;
+    position: fixed; /* Keep it fixed on the right side */
     top: 0;
-    right: 0; /* Position it at the very right */
+    right: 0;
 }
 
-h1, h2 {
-    margin-bottom: 20px;
+.account {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* Added more space between accounts */
 }
 
-p {
+.account-img {
+    margin-right: 10px; /* Space between image and username */
+}
+
+.account-img-circle {
+    width: 40px; /* Size of the circular image */
+    height: 40px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+}
+
+.account-username {
     font-size: 16px;
-    line-height: 1.5;
+    color: #333; /* Dark text */
+}
+
+/* Recommendations section */
+.recommendations {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
 }
