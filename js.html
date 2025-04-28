@@ -4,6 +4,22 @@
         <title>JS callback</title>
 
         <script src="script.js"></script>
+        <script>
+            for (let index = 0; index < 10; index++) {  // index++ means add 1 to the index
+                document.write('<p>index: ' + index + '</p>');
+            }
+
+            document.write('<p>Multiples of 7:</p>');
+            document.write('<ul');
+
+            for (let index = 7; index <= 77; index += 7) {
+                document.write('<li>' + index + '</li>');
+            }
+
+            document.write('</ul>');
+
+
+        </script>
     </head>
     <body onload="alert('Welcome to my page!');">
         <p>Type your name and then click the button</p>
